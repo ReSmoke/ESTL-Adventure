@@ -176,9 +176,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1261293411}
   lines:
-  - "Buenas tardes se\xF1or"
-  - Alejandro
-  - Luis eduardo martinez y katia
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  CanvasJoysticks: {fileID: 1474770358}
   textSpeed: 0.1
   index: 0
 --- !u!114 &43502851
@@ -564,9 +572,10 @@ GameObject:
   - component: {fileID: 589168046}
   - component: {fileID: 589168045}
   - component: {fileID: 589168044}
+  - component: {fileID: 589168048}
   m_Layer: 0
   m_Name: Persona (1)
-  m_TagString: Untagged
+  m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -710,6 +719,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &589168048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589168043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17ad38052c2ea841abe26375aee18a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - left weerferv
+  - left ervrvrtv
+  - left vrbgbbgh
+  - leftvvvvvvvv
+  panel: {fileID: 43502848}
 --- !u!1 &670991280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,8 +1372,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b17ad38052c2ea841abe26375aee18a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonManager: {fileID: 1212222018}
-  player: {fileID: 877853406}
+  lines:
+  - lorem feownionounreoveo
+  - 2lorem councieu veruvn
+  - 3lorem ncniubdoconno|
+  - 4lorem aidoninoniorvr
   panel: {fileID: 43502848}
 --- !u!1 &1112452909
 GameObject:
@@ -1510,8 +1540,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c31d306c1912a6b4188b8e7e2296adef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iniciarDialogo: 0
   jugador: {fileID: 877853406}
+  panel: {fileID: 43502848}
+  CanvasJoysticks: {fileID: 1474770358}
 --- !u!4 &1212222020
 Transform:
   m_ObjectHideFlags: 0
@@ -4443,6 +4474,7 @@ GameObject:
   - component: {fileID: 1474770361}
   - component: {fileID: 1474770360}
   - component: {fileID: 1474770359}
+  - component: {fileID: 1474770363}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4534,6 +4566,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1474770363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474770358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500e9a4d25aec44429deb43c18ee48ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1705489944
 GameObject:
   m_ObjectHideFlags: 0

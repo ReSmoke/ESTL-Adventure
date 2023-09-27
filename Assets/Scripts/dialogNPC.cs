@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class dialogNPC : MonoBehaviour
 {
-    public GameObject buttonManager;
-    public GameObject player;
 
+    public string[] lines;
     public GameObject panel;
-    // Start is called before the first frame update
-    private buttonManager boton;
-    private PlayerMovement jugador;
+    
+
 
     private dialogSccript control;
+   
     void Start()
     {
-        boton= buttonManager.GetComponent<buttonManager>();
-        jugador = player.GetComponent<PlayerMovement>();
+        
         control = panel.GetComponent<dialogSccript>();
     }
 
@@ -31,15 +29,12 @@ public class dialogNPC : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         
-            control.actualizar();
-        
-          
-            
-       
+            control.lines=lines;
         
     }
 
     private void OnTriggerExit2D(){
         control.index=0;
+        
     }
 }

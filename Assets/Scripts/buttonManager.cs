@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class buttonManager : MonoBehaviour
 {
-    public bool iniciarDialogo = false;
+   
     public GameObject jugador;
+    public GameObject panel;
+    public GameObject CanvasJoysticks;
+
+
     private PlayerMovement player; 
+    private dialogSccript control;
+    private DisapearJoy joy;
+    
     // Start is called before the first frame update
     void Start()
     {
+        joy = CanvasJoysticks.GetComponent<DisapearJoy>();
         player = jugador.GetComponent<PlayerMovement>();
-        
+        control = panel.GetComponent<dialogSccript>();
     }
 
     // Update is called once per frame
@@ -21,14 +29,15 @@ public class buttonManager : MonoBehaviour
     }
 
     public void CambiarDialogo(){
+        
         if(player.conversacion){
-            iniciarDialogo=true;
+
+            control.actualizar();
+            joy.dissapear();
             player.runSpeed=5;
         }
-        else{iniciarDialogo=false;player.runSpeed=1;}
+        else{player.runSpeed=1;}
 
-        
-    
     }
   
    

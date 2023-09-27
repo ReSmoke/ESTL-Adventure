@@ -8,14 +8,19 @@ public class dialogSccript : MonoBehaviour
     
     public TextMeshProUGUI dialogueText;
     public string[] lines;
+    public GameObject CanvasJoysticks;
 
     public float textSpeed  = 0.1f;
 
+
     public int index;
+
+     private DisapearJoy joy;
     void Start()
     {
         dialogueText.text = string.Empty;
         StartDialog();
+        joy = CanvasJoysticks.GetComponent<DisapearJoy>();
     }
 
     // Update is called once per frame
@@ -56,6 +61,7 @@ public class dialogSccript : MonoBehaviour
         }
         else{
             gameObject.SetActive(false);
+            joy.appear();
         }
     }
 }
