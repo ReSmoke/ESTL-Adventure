@@ -51,3 +51,6 @@ TagManager:
   - name: Player
     uniqueID: 1244577767
     locked: 0
+  - name: UpperWalls
+    uniqueID: 3955579587
+    locked: 0
