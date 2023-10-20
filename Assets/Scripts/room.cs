@@ -8,7 +8,7 @@ public class room : MonoBehaviour
 
     public GameObject nombreAula;
     public TextMeshProUGUI dialogueText;
-    
+    public bool fastDissapear;
     private void OnTriggerStay2D(Collider2D other)
     {
         paredActual.SetActive(true);
@@ -17,10 +17,15 @@ public class room : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        Invoke("byeWalls",3f);
-        Invoke("byeText",3f);
+        if(fastDissapear){
+            byeText();
+            byeWalls();
+        }
+        else{
+            Invoke("byeWalls",3f);
+            Invoke("byeText",3f);
+        }
     }
-
     private void byeText(){
         nombreAula.SetActive(false);
     }
