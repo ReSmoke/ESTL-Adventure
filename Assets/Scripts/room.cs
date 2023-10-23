@@ -9,14 +9,26 @@ public class room : MonoBehaviour
     public GameObject nombreAula;
     public TextMeshProUGUI dialogueText;
     public bool fastDissapear;
+    public bool noName;
     private void OnTriggerStay2D(Collider2D other)
     {
+        if(other.gameObject.tag=="Player"){
+             if(noName){
+            paredActual.SetActive(true);
+        }
+        else{
         paredActual.SetActive(true);
         nombreAula.SetActive(true);
         dialogueText.text=paredActual.name;
+        }
+
+        }
+       
+        
     }
     private void OnTriggerExit2D(Collider2D other)
     {
+        if(other.gameObject.tag=="Player"){
         if(fastDissapear){
             byeText();
             byeWalls();
@@ -24,6 +36,7 @@ public class room : MonoBehaviour
         else{
             Invoke("byeWalls",3f);
             Invoke("byeText",3f);
+        }
         }
     }
     private void byeText(){
