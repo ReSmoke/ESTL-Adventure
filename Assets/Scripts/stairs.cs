@@ -14,7 +14,7 @@ public class stairs : MonoBehaviour
         subiEscaleras=SceneManager.GetActiveScene().name;
       
         if(subiEscaleras=="escena1"){
-            nuevaPosicion.position=new Vector3(-22.0f,-20.0f,0.0f);
+            nuevaPosicion.position=new Vector3(-23.46f,-15.58f,0);
          }
          else if(subiEscaleras=="escena2"){
             nuevaPosicion.position=new Vector3(-65.0f,23.0f,0.0f);

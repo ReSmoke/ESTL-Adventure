@@ -34,9 +34,9 @@ public class buttonManager : MonoBehaviour
 
             control.actualizar();
             joy.dissapear();
-            player.runSpeed=5;
+            
         }
-        else{player.runSpeed=1;}
+        else{}
 
     }
   
